@@ -19,6 +19,7 @@ public class Aristaeus {
         System.out.println("       2. Webhook Deleter");
         System.out.println("       3. Message Sender (incase u don't wanna spam it)");
         System.out.println("       4. Scheduler");
+        System.out.println("       5. Webhook Nuker Preset");
         Scanner scanner = new Scanner(System.in);
         int scannerS = scanner.nextInt();
         if (scannerS == 1) {
@@ -32,6 +33,9 @@ public class Aristaeus {
         }
         if (scannerS == 4) {
             Scheduler.Schedule();
+        }
+        if (scannerS == 5) {
+         Nuker_Preset.Nuke();
         }
     }
 }

@@ -13,6 +13,39 @@ public class MessageSender {
             Scanner scanner2 = new Scanner(System.in);
                  String MESSAGE = scanner.nextLine();
                     webhook.setContent(MESSAGE);
+        System.out.println("Do you want to set a username? Y/N");
+             Scanner scannerUsername = new Scanner(System.in);
+                 String scannerUsernameValue = scannerUsername.next();
+        switch (scannerUsernameValue) {
+            case "y":
+            case "Y":
+                System.out.println("Set Username: ");
+                     Scanner scannerUsernameSet = new Scanner(System.in);
+                         String scannerUsernameSetValue = scannerUsernameSet.nextLine();
+                             System.out.println("Username set to " + scannerUsernameSetValue);
+                                webhook.setUsername(scannerUsernameSetValue);
+                break;
+            case "n":
+            case "N":
+                webhook.setUsername("");
+                break;
+        }
+        System.out.println("Do you want to set a avatar? Y/N");
+         Scanner scannerAvatar = new Scanner(System.in);
+            String scannerAvatarValue = scannerAvatar.next();
+        switch (scannerAvatarValue) {
+            case "y":
+            case "Y":
+                System.out.println("Avatar URL: ");
+                 Scanner scannerAvatarSet = new Scanner(System.in);
+                     String scannerAvatarSetValue = scannerAvatarSet.nextLine();
+                         webhook.setAvatarUrl(scannerAvatarSetValue);
+                break;
+            case "n":
+            case "N":
+                webhook.setAvatarUrl("");
+                break;
+        }
         webhook.execute();
         System.out.println("Sent!");
     }
