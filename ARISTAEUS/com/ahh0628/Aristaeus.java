@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class Aristaeus {
     public static void main(String[] args) throws IOException, InterruptedException {
-        System.out.println((char)27 + "                  $$\\           $$\\                                         \n" +
+        Process process = Runtime.getRuntime().exec("cmd /c color 2");
+        System.out.println(    "                  $$\\           $$\\                                         \n" +
                 "                  \\__|          $$ |                                        \n" +
                 " $$$$$$\\  $$$$$$\\ $$\\ $$$$$$$\\$$$$$$\\   $$$$$$\\  $$$$$$\\ $$\\   $$\\ $$$$$$$\\ \n" +
                 " \\____$$\\$$  __$$\\$$ $$  _____\\_$$  _|  \\____$$\\$$  __$$\\$$ |  $$ $$  _____|\n" +
@@ -17,6 +18,7 @@ public class Aristaeus {
         System.out.println("       1. Webhook Spammer");
         System.out.println("       2. Webhook Deleter");
         System.out.println("       3. Message Sender (incase u don't wanna spam it)");
+        System.out.println("       4. Scheduler");
         Scanner scanner = new Scanner(System.in);
         int scannerS = scanner.nextInt();
         if (scannerS == 1) {
@@ -27,6 +29,9 @@ public class Aristaeus {
         }
         if (scannerS == 3) {
             MessageSender.sendMessage();
+        }
+        if (scannerS == 4) {
+            Scheduler.Schedule();
         }
     }
 }
