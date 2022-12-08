@@ -19,7 +19,7 @@ import java.util.Set;
  */
 public class DiscordWebhook {
 
-    public final String url;
+    public String url;
     public String content;
     public String username;
     public String avatarUrl;

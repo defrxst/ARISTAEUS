@@ -65,8 +65,8 @@ public class Scheduler {
                 }
             case "N":
             case "n":
-                System.exit(0);
-                break;
+                TimeUnit.SECONDS.sleep(2);
+                Aristaeus.run();
         }
     }
 }

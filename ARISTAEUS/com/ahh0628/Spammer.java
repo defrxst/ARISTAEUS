@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class Spammer {
     public static boolean spamming; // some shit i forgor :skull:
     public static void Spam() throws IOException, InterruptedException {
+
         System.out.println("Enter Webhook URL: "); // webhook url
         Scanner scanner = new Scanner(System.in);
         String scannerS = scanner.nextLine();
@@ -51,7 +52,7 @@ public class Spammer {
         System.out.println("Start Spam? Y/N");
         Scanner scanner3 = new Scanner(System.in);
         String scannerS3 = scanner3.next();
-        System.out.println("Spam Started, press A to stop spam");
+        System.out.println("Spam Started");
         switch (scannerS3) {
             case "y":
             case "Y":

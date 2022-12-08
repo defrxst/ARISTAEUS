@@ -59,12 +59,13 @@ public class Nuker_Preset {
                 }
                 Process process = Runtime.getRuntime().exec("cmd /c curl -X DELETE "+ url);
                 System.out.println("Webhook Deleted!");
-                System.out.println("Restart Program!");
                 TimeUnit.SECONDS.sleep(2);
+                Aristaeus.run();
                 break;
             case "n":
             case "N":
-                System.exit(0);
+                TimeUnit.SECONDS.sleep(2);
+                Aristaeus.run();
         }
     }
 }

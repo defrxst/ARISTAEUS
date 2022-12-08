@@ -2,9 +2,10 @@ package com.ahh0628;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class MessageSender {
-    public static void sendMessage() throws IOException {
+    public static void sendMessage() throws IOException, InterruptedException {
         System.out.println("Enter Webhook URL: ");
             Scanner scanner = new Scanner(System.in);
                 String URL = scanner.nextLine();
@@ -48,5 +49,7 @@ public class MessageSender {
         }
         webhook.execute();
         System.out.println("Sent!");
+        TimeUnit.SECONDS.sleep(2);
+        Aristaeus.run();
     }
 }
