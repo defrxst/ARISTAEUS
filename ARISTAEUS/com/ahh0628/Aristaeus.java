@@ -45,7 +45,7 @@ public class Aristaeus {
             case 7:
                 MultiHookSpammer.make();
             case 8:
-                System.out.println("made by ahh#0628 this is a webhook multitool that I made in Java. \n" +
+                System.out.println("made by defrost#0628 this is a webhook multitool that I made in Java. \n" +
                         "It features a 1 hook and multiple hook spammer/sender. \n" +
                         "More coming soon! \n\n\n\n" );
                 TimeUnit.SECONDS.sleep(5);
